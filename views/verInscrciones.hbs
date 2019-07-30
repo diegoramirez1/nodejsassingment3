@@ -1,0 +1,14 @@
+{{>header}}
+
+    <div class="container">
+        <h3>Lista de aspirantes para {{cursoNombre}}</h3>
+        <br>
+        {{{listarInscripciones lista cursoIdInsc datosEstudiantes}}}
+        <br>
+        {{mensaje}}
+        <br>
+        <br>
+        <a class="btn btn-primary" href="/verCursos" role="button">Volver</a>
+    </div>
+
+{{>footer}}

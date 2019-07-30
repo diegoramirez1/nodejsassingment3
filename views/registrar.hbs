@@ -1,0 +1,45 @@
+{{>header}}
+ 
+<div class="container">
+    <b>{{mensaje}}</b>
+    <br/>
+    <p>Para crear su usuarios ingrese los datos en el siguiente formularoio</p>
+    <form action="/registrar" method="post" enctype="multipart/form-data">
+        <div clas="form-group">
+            <label for="numdoc">Numero de Documento</label>
+            <input type="number" class="form-control" id="numdoc" name="numeroDocumento" placeholder="Numero de Documento" required>
+        </div>
+        <div clas="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" name="nombre" placeholder="Nombre del usuario" required>
+        </div> 
+        <div clas="form-group">
+            <label for="email">Correo Electronico</label>
+            <input type="email" class="form-control" id="email" name="correo" placeholder="Correo electronico" required>
+        </div>
+        <div clas="form-group">
+            <label for="clave">Contraseña</label>
+            <input type="password" class="form-control" id="clave" name="password" placeholder="Contraseña" required>
+        </div>
+        <div clas="form-group">
+            <label for="telf">Telefono</label>
+            <input type="number" id="telf" class="form-control" name="telefono" placeholder="Telefono">
+        </div>
+        <br>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Hoja de Vida</span>
+            </div>
+            <div class="custom-file">
+                <input type="file" name="hvarchivo" accept=".pdf" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" required>
+                <label class="custom-file-label" for="inputGroupFile01">Subir archivo</label>
+            </div>
+        </div>
+        <br>
+        <a class="btn btn-dark" href="/" role="button">Inicio</a>
+        <button class="btn btn-primary">Guardar</button>
+    </form>
+
+</div>
+
+{{>footer}}

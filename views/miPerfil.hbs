@@ -1,0 +1,31 @@
+{{>header}}
+
+    <div class="container">
+
+        <h3> Verifique sus datos </h3>
+        <form action="/miperfil" method="post">
+            <div clas="form-group">
+                <label for="numdoc">Numero de Documento</label>
+                <input type="number" class="form-control" id="numdoc" name="documento" value="{{documento}}" readonly>
+            </div>
+            <div clas="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" name="nombre" value="{{nombre}}" required>
+            </div> 
+            <div clas="form-group">
+                <label for="email">Correo Electronico</label>
+                <input type="email" class="form-control" id="email" name="correo" value="{{correo}}" required>
+            </div>
+            <div clas="form-group">
+                <label for="telf">Telefono</label>
+                <input type="number" id="telf" class="form-control" name="telefono" value="{{telefono}}" required>
+            </div>
+            <br>
+            {{mensaje}}
+            <br>
+            <a class="btn btn-dark" href="/inscribirCurso" role="button">Volver</a>
+            <button class="btn btn-primary">Modificar</button>
+        </form>
+    </div>
+
+{{>footer}}

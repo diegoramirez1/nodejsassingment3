@@ -1,0 +1,10 @@
+{{#if session}}
+ 
+{{else}}
+  <form action="/ingresar" method="post">
+    <input type="number" name="documento" placeholder="numero de identificacion" required>
+    <input type="password" name="password" placeholder="Contraseña" required>
+    <button class="btn btn-primary">Ingresar</button>
+    <a class="btn btn-dark" href="/registrar" role="button">Registrar</a>
+  </form>
+{{/if}}

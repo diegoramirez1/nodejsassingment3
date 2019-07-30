@@ -1,0 +1,50 @@
+{{>header}}
+    <div class="container">
+        {{mensaje}}
+    </div>
+
+    <div class="container">
+        <p>Para crear el curso ingrese los datos en el siguiente formularoio</p>
+        <form action="/crearCurso" method="post">
+            <div clas="form-group">
+                <label for="idCurso">Identificador</label>
+                <input type="number" class="form-control" id="idCurso" name="idCurso" placeholder="Identificador del curso" required>
+            </div>
+            <div clas="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" name="nombre" placeholder="Nombre del curso" required>
+            </div> 
+            <div clas="form-group">
+                <label for="descripcion">Descripcion</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripcion del curso" required>
+            </div>
+            <div clas="form-group">
+                <label for="costo">Inversion</label>
+                <input type="number" class="form-control" id="costo" name="costo" placeholder="Inversion del curso" required>
+            </div>
+            <div class="form-group">
+                <label for="modalidad">Modalidad</label>
+                <select class="form-control" id="modalidad" name="modalidad">
+                    <option>PRESENCIAL</option>
+                    <option>VIRTUAL</option>
+                </select>
+            </div>
+            <div clas="form-group">
+                <label for="horas">Carga horaria</label>
+                <input type="number" class="form-control" id="horas" name="horas" placeholder="Carga horaria del curso" required>
+            </div>
+             <div class="form-group">
+                <label for="estado">Estado</label>
+                <select class="form-control" id="estado" name="estado">
+                    <option>DISPONIBLE</option>
+                    <option>CERRADO</option>
+                </select>
+            </div>
+       
+            <br>
+            <a class="btn btn-dark" href="/verCursos" role="button">Volver</a>
+            <button class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+
+{{>footer}}

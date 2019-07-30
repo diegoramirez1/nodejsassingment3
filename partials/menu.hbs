@@ -1,0 +1,35 @@
+{{#if session}}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse d-flex bd-highlight mb-3" id="navbarNav">
+        <ul class="navbar-nav">
+            {{#ifCond rol 'ADMINISTRADOR'}}
+                <li class="nav-item">
+                  <a class="nav-link" href="gestion">GESTION USUARIOS</a>
+                </li>
+            {{/ifCond}}
+            {{#ifCond rol 'ASPIRANTE'}}  
+                <li class="nav-item">
+                  <a class="nav-link" href="inscribirCurso">INSCRIBIR</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="misCursos">MIS CURSOS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="miPerfil">ACTUALIZAR DATOS</a>
+                </li>
+            {{/ifCond}}
+            {{#ifCond rol 'COORDINADOR'}}
+                <li class="nav-item">
+                    <a class="nav-link" href="crearCurso">CREAR CURSO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="verCursos">VER CURSOS</a>
+                </li>
+            {{/ifCond}}
+            <li class="nav-item">
+                <a class="nav-link" href="salir">SALIR</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+{{/if}}
